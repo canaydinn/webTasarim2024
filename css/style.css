@@ -1,0 +1,37 @@
+/* Seçiciler (Selectors) 
+1. Etiket ismi ile seçme 
+2. ID ile seçme
+3. Class ile seçme
+4. Evrensel seçiciler*/
+/*Selector*/
+*{
+    margin:0;
+    padding:0
+}
+body{
+    background-color: blue;
+}
+h1,h2{
+    /*attribute:*/ /*value*/
+    color: red;   
+}
+h2{
+    background-color: chartreuse;
+}
+/*# işareti id seçici olduğu*/
+#p_bir{
+font-size: 28px;
+}
+#p_iki{
+    color: brown;
+}
+/*. işareti class seçicisi olduğu*/
+.kutu{
+    width: 250px;
+    height: 250px;
+    background-color: chartreuse;
+    margin-bottom: 10px;
+}
+#kutu1{
+    background-color: black;
+}
