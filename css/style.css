@@ -1,7 +1,7 @@
 *{
     margin:0;
     padding:0;
-}
+}/* 
 .menu{
     width: 400px;
     height: 50px;
@@ -24,3 +24,41 @@
     background: red;
     color:blue;
 }
+ */
+
+/*  #flex-kutu{
+    width: auto;
+    height: auto;
+    display:flex;
+    border:2px solid silver;
+    flex-direction: row;
+ } */
+/*  #container{
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    height: 800px;
+ }
+ .box-one{
+    width: 200px;
+    height: 80px;
+    border-radius: 15px;
+    margin: 15px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+
+ } */
+/*  input{
+    width:100px;
+    height: 38px;
+    background-color: #0d6efd;
+    color:#fff;
+    border-radius: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+ } 
+  */
+  div{
+    border: 1px solid;
+    height: 800px;
+ }
