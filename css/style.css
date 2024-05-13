@@ -3,134 +3,131 @@
     padding:0;
 }
 body{
-    background-color: #e9ecef;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    height:100vh;
-    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .container{
     display:flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.sidebar{
+    background-color: blue;
+    width:20%;
+    color:#fff;
+    display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-items:center ;
+    justify-content: space-between;
 }
-.logo_yazi{
-    color:#495057;
-    font-size: 32px;
-    margin-bottom: 10px;
+.logo_box{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 35px;
 }
-.form_kutusu{
-    width:360px;
-    height: 465px;
+.footer_box{
+    height: 400px;
+    margin: 20px;
+}
+.check{
+    font-size: 30px;
+    font-weight: bold;
+}
+.footer_box p{
+    margin-top: 25px;
+}
+.hr_box{
+    display:flex;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.hr_box hr{
+    width:50px;
+    margin-left:20px;
+    height: 2px;
     background-color: #fff;
-    border: 0 solid rgba(0, 0, 0, .125);
+    border:1px solid #fff;
     border-radius: 3px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-.signin_yazi{
-    margin:20px;
-    color:#666;
+.icon_box{
+    margin: 35px 0;
 }
-.input-group{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    border: 1px solid #ced4da;
-    height: 38px;
-    padding-right: 10px;
+.icon_box i{
     margin: 10px;
 }
-.input-group input{
-    height: 38px;
-    width: 280px;
-    color:#495057;
-    border:1px solid #ced4da;
-    border-radius: 3px;
-    padding-left: 10px;
-    border-right-style: none;  
+.footer_label label{
+    margin: 5px;
 }
-.input-group i{
-    color:#495057;
-}
-.remember_kutu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 15px;
-}
-.remember{
-    width: 220px;
-    color:#666;
-    display: flex;
-    align-items: center;
-    
-}
-.remember input{
-    background-color: blue;
-    width:18px;
-    height: 18px;
-    margin-right: 5px;
-}
-.remember_kutu button{
-background-color:#0069d9;
-width: 97px;
-height: 38px;
-border-radius: 3px;
-color: #fff;
-font-size: 15px;
-border: 1px solid #fff;
-border-color: #0062cc;
-}
-.remember_kutu button:hover{
-    background-color: blue;
-}
-.remember label{
-    font-size: 16px;
-}
-.social_kutu{
-    display: flex;
-    flex-direction: column;
+.content{
+    display:flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    height: 100vh;
+    width: 80%;
 }
-.social_kutu button{
-    width: 90%;
-    height: 35px;
-    margin-bottom: 15px; 
-    border-radius: 3px;
-    border:0 solid #fff;  
-    color:#fff;
-    font-size: 15px;
-}
-.facebook_buton{
-    background-color: #0062cc;
-}
-.google_buton{
-    background-color: crimson;
-}
-.social_kutu p{
-    margin-bottom: 15px;
-}
-.social_kutu i{
-    margin-right: 10px;
-}
-.linkler{
+.center_box{
+    width:500px;
+    height: 500px;
+    border:1px solid #000;
     display:flex;
     flex-direction: column;
-    justify-content: flex-start;
-    width: 90%;
-    color: #FFFFFF;
- 
+    justify-content: center;
 }
-.linkler a{
-    text-decoration: none;
+.center_box label{
+    color:grey;
+    margin: 10px;
+}
+.welcome {
+    color:blue !important;
+    font-size: 25px;
+    
+}
+.center_box input{
+    height: 35px;
+    width:80%;
+}
+.email_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+.forget_box{
+    
+    margin: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+input[type="checkbox"]{
+    height: 16px;
+}
+.remember_box{
+    display:flex;
+    flex-direction: row;
+}
+.signin_box{
+    display:flex;
+    justify-content: center;;
+}
+.signin{
+    background-color: blue;
+    width: 50%;
+    color:#fff;
+    height: 45px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.button_box{
+    display:flex;
+    justify-content: center;
+}
+.button_box button{
+    background-color: fff;
+    width: 25%;
+    color:grey;
+    height: 45px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin-left: 5px;
 }
