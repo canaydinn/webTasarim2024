@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -59,6 +60,99 @@
           <span>/</span>
           <span>Dashboard v3</span>
         </div>
+      </div>
+      <div class="chart_section">
+        <canvas id="lineChart"></canvas>
+        <script>
+          let delayed;
+          const aylar=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+          const satislar=[1200,1500,1780,1950,2000,3500,8500,7450,6500,2560,8000,9000];
+          const ctx=document.getElementById('lineChart').getContext('2d');
+          const lineChart=new Chart(ctx,{
+            type:'line',    
+            data:{
+              //x ekseni
+              labels:aylar,
+              //y ekseni
+              datasets:[{
+                data:satislar,
+                borderColor:'rgba(75,192,192,1)',
+                backgroundColor:'rgba(75,192,192,0.2)',
+                borderWidth:1,
+                fill:true
+              }]
+            },
+            options:{
+                        animation: {
+                onComplete: () => {
+                  delayed = true;
+                },
+                delay: (context) => {
+                  let delay = 0;
+                  if (context.type === 'data' && context.mode === 'default' && !delayed) {
+                    delay = context.dataIndex * 300 + context.datasetIndex * 100;
+                  }
+                  return delay;
+                },
+              },
+              //title
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Aylara Göre Satışlar',
+                }
+              },
+              responsive:true,
+              //x ve ye ekseni
+              scales:{
+                x: {
+                  stacked: true,
+                },
+                y: {
+                  stacked: true
+                }
+              }
+            }
+          })
+        </script>
+      </div>
+      <div class="chart_section">
+        <canvas id="dotChart">
+          
+        </canvas>
+        <script>
+          const ctx_second=document.getElementById("dotChart").getContext("2d");
+          const dotChart=new Chart(ctx_second,{
+            type:'scatter',
+            data:{
+              datasets:[{
+                label:'Müşteri Memnuniyeti',
+                data:[
+                  {x:1,y:14},
+                  {x:2,y:18},
+                  {x:3,y:4},
+                  {x:4,y:7},
+                  {x:5,y:9},
+                  {x:6,y:25},
+                  {x:7,y:60},
+                  {x:8,y:32},
+                  {x:9,y:15},
+                  {x:10,y:17},
+                  {x:11,y:71}],
+                  borderColor:'rgba(255,99,132,1)',
+                  backgroundColor:'rgba(255,99,132,0.2)',
+                  borderWidth:1,
+                  showLine:false
+              }]
+            },
+            options:{
+              scales:{
+                x:{type:'linear',position:'bottom',title:{display:true,text:'Aylar'},
+              y:{beginAtZero:true,title:{display:true,text:'Müşteri Memnuniyeti'}}}
+              }
+            }
+          })
+        </script>
       </div>
     </div>
   </div>
